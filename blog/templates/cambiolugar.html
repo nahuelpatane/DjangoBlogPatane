@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+
+<html>
+    <body class="red">
+
+        <divA>
+<br>
+<br>
+            <br>
+    <label for="fname">Nombre:</label>
+    <input type="text" id="fname" name="firstname">
+            <br>
+
+    <label for="lname">Apellido:</label>
+    <input type="text" id="lname" name="lastname">
+            <br>
+
+    <label for="country">Provincia:</label>
+    <select id="country" name="country">
+      <option value="australia">Cordoba</option>
+      <option value="canada">Salta</option>
+      <option value="usa">Formosa</option>
+          <option value="usa">Naci en la nada</option>
+
+    </select>
+  <br>
+            <br>
+            <br>
+            <br>
+  <div id="queonda" onmouseover="mover()"><h1>Siguiente!</h1></div>
+
+</divA>
+<style>
+    label{
+        color:black;
+        font-size: 20px;
+        border-left: 50;
+            margin-left: 1%;
+
+        
+    }    
+    
+    #queonda {
+    position: fixed;
+    font-size: 10px;
+color:black;
+    width: 50;
+    height: 1;
+    text-align: center;
+    border-radius: 12px;
+}
+
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 1%;
+    }
+    
+    
+divA {
+    border-radius: 5px;
+    padding: 40px;
+}
+
+</style>    
+ 
+        
+
+<script>
+function mover() {
+        var div = document.getElementById("queonda");
+        var a = Math.random();
+        var a = a*1000;
+        var b = Math.random();
+        var b = b*600;
+        console.log(a);
+        div.style.left = a;
+        div.style.top = b;
+}
+    
+    
+</script>
+    </body>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+<html>
+    <head>
+        <style>
+            body{
+                background: white;
+                text-align: center;
+            }
+            
+            h1{
+                border: white;
+            }
+            
+.button {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  margin: 5px;
+    align-content: center;
+    
+}
+            h1{
+                color: black;
+            }
+        
+        
+        </style>
+<br>
+        <br>
+        <br>
+        <body class="red">
+            <br>
+
+        
+<h1 id="poenele">0</h1>
+
+
+<button class="button" id="num1" onclick=addNum(1)>1</button>
+<button class="button" id="num1" onclick=addNum(2)>2</button>
+<button class="button" id="num1" onclick=addNum(3)>3</button>
+<br>
+<button class="button" id="num1" onclick=addNum(4)>4</button>
+<button class="button" id="num1" onclick=addNum(5)>5</button>
+<button class="button" id="num1" onclick=addNum(6)>6</button>
+<br>
+<button class="button" id="num1" onclick=addNum(7)>7</button>
+<button class="button" id="num1" onclick=addNum(8)>8</button>
+<button class="button" id="num1" onclick=addNum(9)>9</button>
+<br>
+<button class="button" id="num1" onclick=addNum(0)>0</button>
+<button class="button" id="op" onclick=addNum("+")>+</button>
+<button class="button" id="op" onclick=addNum("-")>-</button>
+<br>
+<button class="button" id="op" onclick=addNum("*")>*</button>
+<button class="button" id="op" onclick=addNum("/")>/</button>
+<button class="button" id="nop" onclick=igualar()>=</button>
+<button class="button" id="op" onclick=borrar()>C</button>
+    
+<script>
+
+    function addNum(num){
+        var num1 = num;
+        var num2 = document.getElementById("poenele").innerHTML;
+        var display = num2 + num1;
+        document.getElementById("poenele").innerHTML = display;
+        console.log(display);
+        }
+    function igualar(){
+        var num2 = document.getElementById("poenele").innerHTML;
+        var res = eval(num2);
+        document.getElementById("poenele").innerHTML = res;
+        }
+    
+    
+    function borrar(){
+        var num2 = document.getElementById("poenele").innerHTML;
+        var res = eval(0)
+        document.getElementById("poenele").innerHTML = res;
+
+        
+        
+    }
+</script>
+        </body>
+            </head>
+</html>
+
+
+{% endblock %}

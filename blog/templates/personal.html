@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<html>	
+    <head>
+
+        <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nano Blog</title>
+    </head>
+
+    <body class="red">
+
+        <script type="text/javascript" src="{% static 'js/jquery-1.11.3.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+
+        <nav class="grey darken-4">
+            <div class="nav-wrapper" >
+                
+                <font face="FunSized" size="7" align=left>Nano Blog</font><br/>
+    <div class="center">
+
+                <ul class="center hide-on-med-and-down">
+           <li><a href="{% url 'nano:Inicio' %}">Inicio</a></li>
+            <li class="divider"></li>
+                
+            <li><a href="{% url 'nano:Imagenes' %}">Galeria de Imagenes</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'nano:Cronometro' %}">Cronometro</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'nano:Conversor' %}">Conversor</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'nano:Boton Loco' %}">Formulario</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'nano:Calculadora' %}">Calculadora</a></li>
+                <li class="divider"></li>
+            <li><a href="{% url 'nano:Comentarios' %}">Comentarios</a></li>    
+            <li><a href="{% url 'nano:Personal' %}">Perosnal</a></li>           
+        </ul>
+                <br>
+        <img src="/static/img/marca.png" height="300" width="310"> <br>
+
+    
+        <font face="FunSized" size="7" class= "holi">EN REPARACION...</font><br/>
+
+                
+                        </div>
+                <style>
+                    .holi{
+                        color: black;
+                    }
+                
+                </style>
+     
+        
+       
+       
+
+    </body>
+</html>
+            {% block contenido %}
+        {% endblock %}
+
